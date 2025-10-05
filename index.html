@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-indigo-600">Gaming Store</h1>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#products" class="hover:text-indigo-600">Products</a>
+        <a href="#reviews" class="hover:text-indigo-600">Reviews</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="#home" class="block py-2 px-4 hover:bg-gray-100">Home</a>
+      <a href="#products" class="block py-2 px-4 hover:bg-gray-100">Products</a>
+      <a href="#reviews" class="block py-2 px-4 hover:bg-gray-100">Reviews</a>
+      <a href="#contact" class="block py-2 px-4 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section id="home" class="relative w-full h-[70vh] overflow-hidden">
+    <div class="slider relative w-full h-full">
+      <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-100">
+        <img src="banner.png" class="w-full h-full object-cover" alt="Banner 1">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Gaming Store</h2>
+          <p class="text-lg mb-6">Discover quality products at the best prices.</p>
+          <a href="#products" class="bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-700">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+        <img src="banner 2.png" class="w-full h-full object-cover" alt="Banner 2">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Trendy, Reliable & Affordable</h2>
+          <p class="text-lg mb-6">Everything you need, all in one place.</p>
+          <a href="#products" class="bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-700">Explore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="max-w-7xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Product Card -->
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="Product1.jpg" alt="RGB Gaming Mouse" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">RGB Gaming Mouse</h3>
+          <p class="text-gray-600 mb-2">High-precision sensor, customizable buttons, and vibrant RGB lights for serious gamers.</p>
+          <p class="font-bold text-indigo-600 mb-3">$59.99</p>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="Product2.jpg" alt="Amazon Echo" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Amazon Echo</h3>
+          <p class="text-gray-600 mb-2">Smart speaker with Alexa voice assistant for music, news, and smart home control.</p>
+          <p class="font-bold text-indigo-600 mb-3">$99.00</p>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="Product3.jpg" alt="PlayStation 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">PlayStation 5</h3>
+          <p class="text-gray-600 mb-2">Next-gen gaming console with stunning graphics, ultra-fast SSD, and immersive gameplay.</p>
+          <p class="font-bold text-indigo-600 mb-3">$499.99</p>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Customer Reviews</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+          <img src="customer1.png" class="w-20 h-20 rounded-full mb-4" alt="Customer 1">
+          <h3 class="font-semibold mb-2">Tamanna</h3>
+          <p class="text-yellow-500 mb-2">★★★★★</p>
+          <p class="text-gray-600">This mouse is built for precision. Adjustable DPI, customizable buttons, and the weight tuning system make it perfect for FPS games. I have used it daily for over a year, and it is still flawless.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+          <img src="customer2.png" class="w-20 h-20 rounded-full mb-4" alt="Customer 2">
+          <h3 class="font-semibold mb-2">Shawon</h3>
+          <p class="text-yellow-500 mb-2">★★★★☆</p>
+          <p class="text-gray-600">The new Echo is compact, stylish, and the sound quality really surprised me. Alexa responds quickly, and it blends perfectly into my setup. I just wish the mic sensitivity was a bit better in noisy rooms.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+          <img src="customer3.png" class="w-20 h-20 rounded-full mb-4" alt="Customer 3">
+          <h3 class="font-semibold mb-2">Soniya</h3>
+          <p class="text-yellow-500 mb-2">★★★★★</p>
+          <p class="text-gray-600">The PlayStation 5 completely changes the way I game. The graphics are stunning, and the DualSense controller feels next-level with its adaptive triggers. Loading times are lightning fast. If you’re a serious gamer, this console is worth every penny.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-indigo-600 text-white text-center py-16 px-4">
+    <h2 class="text-3xl font-bold mb-4">Join Our Community Today</h2>
+    <p class="mb-6 text-lg">Subscribe now to get the latest updates and exclusive offers.</p>
+    <button class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Subscribe Now</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-7xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <p class="mb-3"><strong>Address:</strong> 5 CDA Ave, Chattogram 4000</p>
+        <p class="mb-3"><strong>Email:</strong> sitasib801@gmail.com</p>
+        <p class="mb-3"><strong>Phone:</strong> 01775554742</p>
+      </div>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-indigo-500">
+        <input type="email" placeholder="Email" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-indigo-500">
+        <textarea placeholder="Message" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-indigo-500"></textarea>
+        <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 Gaming Store. All Rights Reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#home" class="hover:text-indigo-400">Home</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+        <a href="#about" class="hover:text-indigo-400">About</a>
+      </div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#"><img src="facebook.jpg" alt="Facebook" class="w-5 h-5"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram" class="w-5 h-5"></a>
+        <a href="#"><img src="youtube.jpg" alt="YouTube" class="w-5 h-5"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
